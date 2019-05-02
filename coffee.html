@@ -57,15 +57,19 @@
 
     const coffeeImage = document.querySelector('#coffee-image');
 
-    coffeeImage.setAttribute('src','file:///home/engineer/src/js-coffee-shop/static/coffee_beans.jpg');
+    coffeeImage.setAttribute('src', 'file:///home/engineer/src/js-coffee-shop/static/coffee_beans.jpg');
 
     // const revenueMessage;
 
-    function makeCoffee(evt) {
-      coffeeImage.setAttribute('src','file:///home/engineer/src/js-coffee-shop/static/coffee_mug.jpg');
+    function makeCoffee() {
+      coffeeImage.setAttribute('src', 'file:///home/engineer/src/js-coffee-shop/static/coffee_mug.jpg');
     }
 
-    coffeeImage.addEventListener('click', makeCoffee);
+    function waitFifteen() {
+      setTimeout(makeCoffee, 1500);  
+    }
+
+    coffeeImage.addEventListener('click', waitFifteen);
 
     // use this JavaScript object in further study step
 
